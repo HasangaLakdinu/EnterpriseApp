@@ -54,6 +54,8 @@ namespace WinFormsApp1
                 return;
             }
 
+            weightOfMeal /= 1000;
+
             CheatMealInfo cheatMealInfo = new CheatMealInfo
             {
                 UserName = AppContext.LoggedInUsername,

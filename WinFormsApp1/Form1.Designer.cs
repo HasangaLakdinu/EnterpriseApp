@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             enterWorkoutDetailsBtn = new Button();
-            reviewDetails = new Button();
             cheatMealBtn = new Button();
             workoutReportBtn = new Button();
             cheatMealReportBtn = new Button();
@@ -46,16 +45,6 @@
             enterWorkoutDetailsBtn.UseVisualStyleBackColor = true;
             enterWorkoutDetailsBtn.Click += enterDetailsBtn_Click;
             // 
-            // reviewDetails
-            // 
-            reviewDetails.Location = new Point(292, 200);
-            reviewDetails.Name = "reviewDetails";
-            reviewDetails.Size = new Size(173, 29);
-            reviewDetails.TabIndex = 1;
-            reviewDetails.Text = "Review your details";
-            reviewDetails.UseVisualStyleBackColor = true;
-            reviewDetails.Click += reviewDetails_Click;
-            // 
             // cheatMealBtn
             // 
             cheatMealBtn.Location = new Point(292, 150);
@@ -68,7 +57,7 @@
             // 
             // workoutReportBtn
             // 
-            workoutReportBtn.Location = new Point(270, 250);
+            workoutReportBtn.Location = new Point(270, 220);
             workoutReportBtn.Name = "workoutReportBtn";
             workoutReportBtn.Size = new Size(216, 30);
             workoutReportBtn.TabIndex = 3;
@@ -78,7 +67,7 @@
             // 
             // cheatMealReportBtn
             // 
-            cheatMealReportBtn.Location = new Point(270, 299);
+            cheatMealReportBtn.Location = new Point(270, 284);
             cheatMealReportBtn.Name = "cheatMealReportBtn";
             cheatMealReportBtn.Size = new Size(221, 29);
             cheatMealReportBtn.TabIndex = 4;
@@ -88,7 +77,7 @@
             // 
             // predictBtn
             // 
-            predictBtn.Location = new Point(249, 351);
+            predictBtn.Location = new Point(250, 340);
             predictBtn.Name = "predictBtn";
             predictBtn.Size = new Size(256, 29);
             predictBtn.TabIndex = 5;
@@ -105,7 +94,6 @@
             Controls.Add(cheatMealReportBtn);
             Controls.Add(workoutReportBtn);
             Controls.Add(cheatMealBtn);
-            Controls.Add(reviewDetails);
             Controls.Add(enterWorkoutDetailsBtn);
             Name = "Form1";
             Text = "Your Details";
@@ -116,7 +104,6 @@
         #endregion
 
         private Button enterWorkoutDetailsBtn;
-        private Button reviewDetails;
         private Button cheatMealBtn;
         private Button workoutReportBtn;
         private Button cheatMealReportBtn;

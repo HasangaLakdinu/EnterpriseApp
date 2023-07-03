@@ -49,11 +49,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(100, 162);
+            label2.Location = new Point(75, 158);
             label2.Name = "label2";
-            label2.Size = new Size(116, 20);
+            label2.Size = new Size(171, 20);
             label2.TabIndex = 0;
-            label2.Text = "Quantity Weight";
+            label2.Text = "Quantity Weight (grams)";
             label2.Click += label2_Click;
             // 
             // mealWeight

@@ -73,7 +73,7 @@ namespace WinFormsApp1
                 UserName = "Hasanga",
                 Date = DateTime.Now.AddDays(-1),
                 CheatMealName = "Pizza",
-                Weight = 200
+                Weight = 0.2
             };
             cheatMealData.Add(cheatMeal1);
 
@@ -82,7 +82,7 @@ namespace WinFormsApp1
                 UserName = "Hasanga",
                 Date = DateTime.Now.AddDays(-2),
                 CheatMealName = "Burger",
-                Weight = 150
+                Weight = 0.15
             };
             cheatMealData.Add(cheatMeal2);
 
@@ -91,7 +91,7 @@ namespace WinFormsApp1
                 UserName = "Hasanga",
                 Date = DateTime.Now.AddDays(-3),
                 CheatMealName = "Ice Cream",
-                Weight = 100
+                Weight = 0.1
             };
             cheatMealData.Add(cheatMeal3);
 
@@ -100,7 +100,7 @@ namespace WinFormsApp1
                 UserName = "Hasanga",
                 Date = DateTime.Now.AddDays(-4),
                 CheatMealName = "Chocolate Cake",
-                Weight = 180
+                Weight = 0.18
             };
             cheatMealData.Add(cheatMeal4);
 
@@ -109,7 +109,7 @@ namespace WinFormsApp1
                 UserName = "Hasanga",
                 Date = DateTime.Now.AddDays(-5),
                 CheatMealName = "French Fries",
-                Weight = 120
+                Weight = 0.12
             };
             cheatMealData.Add(cheatMeal5);
 

@@ -44,19 +44,33 @@ namespace WinFormsApp1
 
         private void predictBtn_Click(object sender, EventArgs e)
         {
-            // Calculate the average workout hours and weight for the available data
             double averageWorkoutHours = Program.WorkoutDayInfoList.Average(w => w.WorkoutHours);
             double averageWeight = Program.WorkoutDayInfoList.Average(w => w.Weight);
 
-            // Predict future fitness status based on average workout hours
-            string fitnessStatus = averageWorkoutHours >= 2 ? "Good" : "Average";
+            // Calculate the total number of cheat meals and the average cheat meal weight for the available data
+            int totalCheatMeals = Program.CheatMealInfoList.Count;
+            double averageCheatMealWeight = Program.CheatMealInfoList.Average(c => c.Weight);
 
-            // Predict future weight based on average weight
-            double predictedWeight = averageWeight - 1; // Assuming a 1-pound weight loss
-            string formattedWeight = predictedWeight.ToString("0.00"); // Format weight to two decimal points
+            // Predict future fitness status based on average workout hours and total cheat meals
+            string fitnessStatus;
+            if (averageWorkoutHours >= 2 && totalCheatMeals < 3)
+            {
+                fitnessStatus = "Good";
+            }
+            else if (averageWorkoutHours >= 1 && totalCheatMeals < 5)
+            {
+                fitnessStatus = "Average";
+            }
+            else
+            {
+                fitnessStatus = "Poor";
+            }
+
+            // Predict future weight based on average weight and average cheat meal weight
+            double predictedWeight = averageWeight + (averageCheatMealWeight * 0.5); // Assuming a 0.5 kg weight gain per cheat meal
 
             // Display the predictions in a message box
-            string message = $"Predicted Fitness Status: {fitnessStatus}\nPredicted Weight: {formattedWeight} kg";
+            string message = $"Predicted Fitness Status: {fitnessStatus}\nPredicted Weight: {predictedWeight:F2} kg";
             MessageBox.Show(message, "Fitness Prediction");
         }
     }

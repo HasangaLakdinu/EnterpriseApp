@@ -86,7 +86,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(cheatMealReport);
             Name = "ViewCheatMealReport";
-            Text = "ViewCheatMealReport";
+            Text = "View Cheat Meal Report";
             Load += ViewCheatMealReport_Load;
             ((System.ComponentModel.ISupportInitialize)cheatMealReport).EndInit();
             ResumeLayout(false);

@@ -86,7 +86,7 @@
             ClientSize = new Size(776, 450);
             Controls.Add(workoutReport);
             Name = "ViewReport";
-            Text = "ViewReport";
+            Text = "View Weekly Workout Report";
             Load += ViewReport_Load;
             ((System.ComponentModel.ISupportInitialize)workoutReport).EndInit();
             ResumeLayout(false);

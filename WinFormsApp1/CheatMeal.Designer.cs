@@ -109,7 +109,7 @@
             Controls.Add(label3);
             Controls.Add(label1);
             Name = "CheatMeal";
-            Text = "CheatMeal";
+            Text = "Enter Cheat Meal";
             ResumeLayout(false);
             PerformLayout();
         }

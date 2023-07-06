@@ -157,7 +157,7 @@
             Controls.Add(Date);
             Controls.Add(dateTimePicker1);
             Name = "AddDetails";
-            Text = "AddDetails";
+            Text = "Add Workout Details";
             ResumeLayout(false);
             PerformLayout();
         }

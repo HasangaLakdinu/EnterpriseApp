@@ -37,17 +37,18 @@
             // 
             // enterWorkoutDetailsBtn
             // 
-            enterWorkoutDetailsBtn.Location = new Point(292, 100);
+            enterWorkoutDetailsBtn.BackColor = Color.White;
+            enterWorkoutDetailsBtn.Location = new Point(306, 132);
             enterWorkoutDetailsBtn.Name = "enterWorkoutDetailsBtn";
             enterWorkoutDetailsBtn.Size = new Size(173, 29);
             enterWorkoutDetailsBtn.TabIndex = 0;
             enterWorkoutDetailsBtn.Text = "Enter Workout Details";
-            enterWorkoutDetailsBtn.UseVisualStyleBackColor = true;
+            enterWorkoutDetailsBtn.UseVisualStyleBackColor = false;
             enterWorkoutDetailsBtn.Click += enterDetailsBtn_Click;
             // 
             // cheatMealBtn
             // 
-            cheatMealBtn.Location = new Point(292, 150);
+            cheatMealBtn.Location = new Point(306, 195);
             cheatMealBtn.Name = "cheatMealBtn";
             cheatMealBtn.Size = new Size(173, 29);
             cheatMealBtn.TabIndex = 2;
@@ -57,7 +58,7 @@
             // 
             // workoutReportBtn
             // 
-            workoutReportBtn.Location = new Point(270, 220);
+            workoutReportBtn.Location = new Point(287, 253);
             workoutReportBtn.Name = "workoutReportBtn";
             workoutReportBtn.Size = new Size(216, 30);
             workoutReportBtn.TabIndex = 3;
@@ -67,7 +68,7 @@
             // 
             // cheatMealReportBtn
             // 
-            cheatMealReportBtn.Location = new Point(270, 284);
+            cheatMealReportBtn.Location = new Point(282, 321);
             cheatMealReportBtn.Name = "cheatMealReportBtn";
             cheatMealReportBtn.Size = new Size(221, 29);
             cheatMealReportBtn.TabIndex = 4;
@@ -77,7 +78,7 @@
             // 
             // predictBtn
             // 
-            predictBtn.Location = new Point(250, 340);
+            predictBtn.Location = new Point(270, 389);
             predictBtn.Name = "predictBtn";
             predictBtn.Size = new Size(256, 29);
             predictBtn.TabIndex = 5;
@@ -89,6 +90,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Menu;
             ClientSize = new Size(809, 534);
             Controls.Add(predictBtn);
             Controls.Add(cheatMealReportBtn);
@@ -96,7 +98,7 @@
             Controls.Add(cheatMealBtn);
             Controls.Add(enterWorkoutDetailsBtn);
             Name = "Form1";
-            Text = "Your Details";
+            Text = "Welcome to Health Tracker";
             Load += Form1_Load;
             ResumeLayout(false);
         }

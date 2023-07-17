@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,28 +19,42 @@ namespace WinFormsApp1
             InitializeComponent();
         }
 
-        private void loginBtn_Click(object sender, EventArgs e)
+        private async void loginBtn_Click(object sender, EventArgs e)
         {
             string username = usernamebox.Text;
             string password = passwordBox.Text;
 
-            if (Program.UserCredentials.ContainsKey(username))
+            HttpClient client = new HttpClient();
+
+            try
             {
-                if (Program.UserCredentials[username] == password)
+                HttpResponseMessage response = await client.GetAsync($"https://localhost:7104/api/Login/{username}");
+
+                if (response.IsSuccessStatusCode)
                 {
-                    Form1 startingForm = new Form1();
-                    startingForm.Show();
-                    this.Hide();
-                    AppContext.LoggedInUsername = username;
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+                    User credentials = JsonConvert.DeserializeObject<User>(apiResponse);
+
+                    if (credentials != null && credentials.UserName == username && credentials.Password == password)
+                    {
+                        Form1 startingForm = new Form1();
+                        startingForm.Show();
+                        this.Hide();
+                        AppContext.LoggedInUsername = username;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Incorrect username or password!");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Incorrect password!");
+                    MessageBox.Show("Error accessing the API!");
                 }
             }
-            else
+            catch (HttpRequestException ex)
             {
-                MessageBox.Show("Username not found!");
+                MessageBox.Show("Error connecting to the API: " + ex.Message);
             }
         }
     }
